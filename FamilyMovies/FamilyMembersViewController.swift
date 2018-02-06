@@ -23,16 +23,17 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate, MO
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let selectedIndex = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: selectedIndex, animated: true)
-        }
-        
-        if let navVC = segue.destinationViewController as? UINavigationController,
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navVC = segue.destination as? UINavigationController,
             let addFamilyMemberVC = navVC.viewControllers[0] as? AddFamilyMemberViewController {
             
             addFamilyMemberVC.delegate = self
         }
+        
+        guard let selectedIndex = tableView.indexPathForSelectedRow
+            else { return }
+        
+        tableView.deselectRow(at: selectedIndex, animated: true)
     }
 
 }

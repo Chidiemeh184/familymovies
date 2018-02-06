@@ -19,8 +19,8 @@ class MoviesViewController: UIViewController, AddMovieDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let navVC = segue.destinationViewController as? UINavigationController,
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navVC = segue.destination as? UINavigationController,
             let addMovieVC = navVC.viewControllers[0] as? AddMovieViewController {
             
             addMovieVC.delegate = self
