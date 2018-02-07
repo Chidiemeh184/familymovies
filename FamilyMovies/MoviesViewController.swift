@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
-class MoviesViewController: UIViewController, AddMovieDelegate {
+class MoviesViewController: UIViewController, AddMovieDelegate, MOCViewControllerType {
+    
+    var managedObjectContext: NSManagedObjectContext?
+    var familyMember : FamilyMember?
     
     @IBOutlet var tableView: UITableView!
     
     func saveMovie(withName name: String) {
-        print("should save movie with name: \(name)")
+        guard let moc = managedObjectContext else {return}
+        moc.perform {
+            
+            let movie = Movie(context: moc)
+            movie.name = name
+            self.familyMember?.favoriteMovies = self.familyMember?.favoriteMovies?.adding(movie) as NSSet?
+            do {
+                try moc.save()
+                print("Movie saved with name: \(name)")
+            }catch {
+                moc.rollback()
+            }
+        }
+       
     }
 
     // MARK: - Navigation

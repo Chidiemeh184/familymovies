@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let container = NSPersistentContainer(name: "FamilyMovies")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error {
-                fatalError("Unresolved error \(error), \(error)")
+                fatalError("Unresolved error \(error), \(error )")
             }
         })
         return container

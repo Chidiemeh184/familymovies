@@ -16,8 +16,16 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate, MO
     var managedObjectContext: NSManagedObjectContext?
     
     func saveFamilyMember(withName name: String) {
-        
-        
+        guard let moc = managedObjectContext  else {return}
+        let familyMember = FamilyMember(context: moc)
+        familyMember.name = name
+        moc.perform {
+            do{
+                try moc.save()
+            }catch {
+                moc.rollback()
+            }
+        }
     }
 
     // MARK: - Navigation
