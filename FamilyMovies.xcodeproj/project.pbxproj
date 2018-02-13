@@ -20,6 +20,7 @@
 		9795F4821D4E0BDC005AF8AF /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9795F4811D4E0BDC005AF8AF /* NSPersistentContainer.swift */; };
 		9795F4841D4E103F005AF8AF /* MOCViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9795F4831D4E103F005AF8AF /* MOCViewControllerType.swift */; };
 		9795F4871D4E138C005AF8AF /* FamilyMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9795F4851D4E138C005AF8AF /* FamilyMovies.xcdatamodeld */; };
+		EF7E1406203385A3004A48B3 /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7E1405203385A3004A48B3 /* NSManagedObjectContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9795F4811D4E0BDC005AF8AF /* NSPersistentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
 		9795F4831D4E103F005AF8AF /* MOCViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOCViewControllerType.swift; sourceTree = "<group>"; };
 		9795F4861D4E138C005AF8AF /* FamilyMovies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyMovies.xcdatamodel; sourceTree = "<group>"; };
+		EF7E1405203385A3004A48B3 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				9795F4811D4E0BDC005AF8AF /* NSPersistentContainer.swift */,
+				EF7E1405203385A3004A48B3 /* NSManagedObjectContext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9795F4871D4E138C005AF8AF /* FamilyMovies.xcdatamodeld in Sources */,
+				EF7E1406203385A3004A48B3 /* NSManagedObjectContext.swift in Sources */,
 				9795F43D1D4CAFEC005AF8AF /* AppDelegate.swift in Sources */,
 				9795F4591D4CB45F005AF8AF /* AddMovieDelegate.swift in Sources */,
 				9795F4501D4CB2AA005AF8AF /* FamilyMembersViewController.swift in Sources */,

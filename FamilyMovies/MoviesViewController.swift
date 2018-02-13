@@ -23,11 +23,15 @@ class MoviesViewController: UIViewController, AddMovieDelegate, MOCViewControlle
             let movie = Movie(context: moc)
             movie.name = name
             self.familyMember?.favoriteMovies = self.familyMember?.favoriteMovies?.adding(movie) as NSSet?
-            do {
-                try moc.save()
-                print("Movie saved with name: \(name)")
-            }catch {
-                moc.rollback()
+//            do {
+//                try moc.save()
+//                print("Movie saved with name: \(name)")
+//            }catch {
+//                moc.rollback()
+//            }
+            
+            moc.persist {
+                <#code#>
             }
         }
        

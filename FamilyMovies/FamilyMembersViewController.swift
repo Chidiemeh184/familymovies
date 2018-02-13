@@ -19,13 +19,17 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate, MO
         guard let moc = managedObjectContext  else {return}
         let familyMember = FamilyMember(context: moc)
         familyMember.name = name
-        moc.perform {
-            do{
-                try moc.save()
-            }catch {
-                moc.rollback()
-            }
+//        moc.perform {
+//            do{
+//                try moc.save()
+//            }catch {
+//                moc.rollback()
+//            }
+//        }
+        moc.persist {
+            <#code#>
         }
+        
     }
 
     // MARK: - Navigation
